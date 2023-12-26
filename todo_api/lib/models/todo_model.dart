@@ -1,12 +1,12 @@
-class AutoGenerate {
-  AutoGenerate({
+class TodoModel {
+  TodoModel({
     required this.code,
     required this.data,
   });
   late final int code;
   late final List<Todo> data;
 
-  AutoGenerate.fromJson(Map<String, dynamic> json) {
+  TodoModel.fromJson(Map<String, dynamic> json) {
     code = json['code'];
     data = List.from(json['data']).map((e) => Todo.fromJson(e)).toList();
   }
